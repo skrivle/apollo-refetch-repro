@@ -53,6 +53,7 @@ test('Should execute refetchQueries', async () => {
     const apolloClient = new ApolloClient({
       link: new BatchHttpLink({
         uri: '/graphql',
+        // batchMax: 1 => enable this to make it work again ...
       }),
       cache: new InMemoryCache(),
     });
